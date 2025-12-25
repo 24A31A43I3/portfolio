@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GANESH Developer - Portfolio</title>
     <title>Ganesh Digital | Full Stack Web Developer Portfolio</title>
-    <meta name="description" content="Ganesh Digital - Portfolio of Ganesh Neeli, a Full Stack Web Developer specializing in React, Next.js, and modern web design.">
+    <meta name="description" content="Ganesh Digital - Portfolio of Ganesh Neeli, a Full Stack Web Developer.">
+    
     <meta name="keywords" content="Ganesh Digital, Ganesh Neeli, Web Developer Kakinada, Frontend Developer Portfolio">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="style.css">
@@ -16,7 +16,9 @@
     <nav>
         <div class="nav-content">
             <div class="logo">GANESH</div>
+            
             <button class="menu-toggle" id="menu-toggle">☰</button>
+            
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -24,9 +26,12 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <button id="theme-toggle" aria-label="Toggle Theme">
-                    <span class="theme-icon">🌞</span>
-                </button>
+                
+                <li>
+                    <button id="theme-toggle" aria-label="Toggle Theme">
+                        <span class="theme-icon">🌞</span>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -35,14 +40,10 @@
         <div class="container">
             <div class="profile-section">
                 <img src="ganesh1.jpg" alt="Ganesh Developer" class="profile-photo" width="300" height="300">
-   
                 <div class="text-content">
                     <h1>Hi, I'm <span style="color: #2563eb;">GANESH</span> Developer</h1>
                     <p class="subtitle">Full Stack Web Developer</p>
-                    <p class="description">
-                        I create beautiful and functional websites that help businesses grow.
-                    </p>
-   
+                    <p class="description">I create beautiful and functional websites that help businesses grow.</p>
                     <div class="cta-buttons">
                         <a href="#projects" class="btn primary">View My Work</a>
                         <a href="#contact" class="btn secondary">Contact Me</a>
@@ -167,19 +168,15 @@
    
         <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbyX3QgzmsTg235gh7dsjT0hcvw00jaiEWmCtHuaWSs7PBzOb3d7ol1NOAKzmpf7frDv/exec';
-   
             const form = document.forms['contact-form'];
             const formStatus = document.getElementById('form-status');
    
             form.addEventListener('submit', e => {
                 e.preventDefault();
-                
                 const submitButton = form.querySelector('button');
                 submitButton.disabled = true;
                 submitButton.textContent = 'Sending...';
-   
                 formStatus.textContent = '';
-   
                 const formData = new FormData(form);
                 fetch(scriptURL, { method: 'POST', body: formData })
                     .then(response => {
@@ -212,7 +209,6 @@
                 <a href="https://wa.me/919391864598"><i class="fab fa-whatsapp"></i></a>
             </div>
             <p>&copy; 2025 GANESH Developer. All rights reserved.</p>
-            
         </div>
     </footer>
 

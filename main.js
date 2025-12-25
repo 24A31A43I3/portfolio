@@ -3,46 +3,47 @@ document.addEventListener("DOMContentLoaded", function () {
     // --- 1. MOBILE MENU TOGGLE ---
     const menuToggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
-    const navItems = document.querySelectorAll(".nav-links a");
-
+    
+    // Check if elements exist to prevent errors
     if (menuToggle && navLinks) {
         menuToggle.addEventListener("click", function () {
             navLinks.classList.toggle("active");
             
-            // Optional: Change icon to 'X' when open
+            // Toggle icon between Hamburger (☰) and Close (✕)
             if (navLinks.classList.contains("active")) {
                 menuToggle.textContent = "✕";
             } else {
                 menuToggle.textContent = "☰";
             }
         });
+
+        // Close menu when a link is clicked
+        const navItems = document.querySelectorAll(".nav-links a");
+        navItems.forEach(item => {
+            item.addEventListener("click", function () {
+                navLinks.classList.remove("active");
+                menuToggle.textContent = "☰";
+            });
+        });
     }
 
-    // Close mobile menu when a link is clicked
-    navItems.forEach(item => {
-        item.addEventListener("click", function () {
-            navLinks.classList.remove("active");
-            if (menuToggle) menuToggle.textContent = "☰";
-        });
-    });
-
-
-    // --- 2. THEME TOGGLE (Dark/Light) ---
+    // --- 2. THEME TOGGLE ---
     const themeToggle = document.getElementById("theme-toggle");
     const themeIcon = document.querySelector(".theme-icon");
-    
-    // Check local storage for saved theme
+    const body = document.body;
+
+    // Load saved theme from local storage
     if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark-theme");
+        body.classList.add("dark-theme");
         if (themeIcon) themeIcon.textContent = "🌙";
     }
 
     if (themeToggle) {
         themeToggle.addEventListener("click", function () {
-            document.body.classList.toggle("dark-theme");
+            body.classList.toggle("dark-theme");
             
-            // Update icon and save to local storage
-            if (document.body.classList.contains("dark-theme")) {
+            // Update icon and save preference
+            if (body.classList.contains("dark-theme")) {
                 if (themeIcon) themeIcon.textContent = "🌙";
                 localStorage.setItem("theme", "dark");
             } else {
@@ -51,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-
 
     // --- 3. NAVBAR SCROLL EFFECT ---
     const nav = document.querySelector('nav');
@@ -65,8 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
         
-        if (currentScroll > lastScroll && !navLinks.classList.contains("active")) {
-            // Scrolling down (and menu is closed) -> Hide Nav
+        if (currentScroll > lastScroll && (!navLinks || !navLinks.classList.contains("active"))) {
+            // Scrolling down -> Hide Nav
             nav.style.transform = 'translateY(-100%)';
         } else {
             // Scrolling up -> Show Nav
@@ -77,25 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         lastScroll = currentScroll;
     });
 
-
-    // --- 4. SMOOTH SCROLL FOR ANCHOR LINKS ---
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === "#") return; // Skip empty links
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-
-    // --- 5. FADE-IN ANIMATION ---
+    // --- 4. FADE-IN ANIMATION ---
     const observerOptions = { threshold: 0.1 };
     
     const observer = new IntersectionObserver((entries) => {
@@ -113,5 +95,4 @@ document.addEventListener("DOMContentLoaded", function () {
         section.style.transition = "all 0.6s ease-out";
         observer.observe(section);
     });
-
 });
