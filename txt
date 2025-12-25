@@ -1,3 +1,0 @@
- <meta name="description" content="Ganesh Digital - Portfolio of Ganesh Neeli, a Full Stack Web Developer specializing in React, Next.js, and modern web design.">
-    <meta name="keywords" content="Ganesh Digital, Ganesh Neeli, Web Developer Kakinada, Frontend Developer Portfolio">
-    <meta name="robots" content="index, follow">
