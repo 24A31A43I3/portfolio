@@ -25,29 +25,25 @@
                 </button>
             </ul>
         </div>
-    </nav>>
+    </nav>
+
     <section id="home">
         <div class="container">
             <div class="profile-section">
-                
-                <!-- Profile Image -->
                 <img src="ganesh1.jpg" alt="Ganesh Developer" class="profile-photo" width="300" height="300">
-    
-                <!-- Text Content -->
+   
                 <div class="text-content">
                     <h1>Hi, I'm <span style="color: #2563eb;">GANESH</span> Developer</h1>
                     <p class="subtitle">Full Stack Web Developer</p>
                     <p class="description">
                         I create beautiful and functional websites that help businesses grow.
                     </p>
-    
-                    <!-- Buttons -->
+   
                     <div class="cta-buttons">
                         <a href="#projects" class="btn primary">View My Work</a>
                         <a href="#contact" class="btn secondary">Contact Me</a>
                     </div>
                 </div>
-    
             </div>
         </div>
     </section>  
@@ -57,41 +53,41 @@
             <h2>ABOUT ME</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a passionate web developer with expertise in creating modern web applications. With  1 month of experience in the prodigy infotech industry, I specialize in building responsive, user-friendly websites that deliver results.</p>
-                </section>
-                    <section id="education">
-                        <div class="container">
-                    <h2>EDUCATION</h2>
-                    <div class="about-EDUCATION">
-                        <div class="about-text-education">
-                            <p>10th calss in ZP HIGH SCHOOL virawada<br>intermediate in ADITYA JUNIOR COLLEGE SRINAGAR kakinada<br> <B>BTECH</B> in cse(AI) at PRAGATI ENGINEERING COLLEGE   </p>
-                        </div>
-                        </section>
-                        <section id="skills">
-                            <div class="container">  
-                                <h2>SKILLS</h2> <!-- Heading above the skill tags -->
-                                <div class="skills">
-                                    <div class="skill-tags">
-                                        <span>HTML5</span>
-                                        <span>CSS3</span>
-                                        <span>JavaScript</span>
-                                        <span>React</span>
-                                        <span>MongoDB</span>
-                                        <span>MySQL</span>
-                                        <span>Python</span>
-                                        <span>Java</span>
-                                        <span>Problem Solving in c</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        </div>
-                    </div>
+                    <p>I'm a passionate web developer with expertise in creating modern web applications. With 1 month of experience in the prodigy infotech industry, I specialize in building responsive, user-friendly websites that deliver results.</p>
                 </div>
             </div>
         </div>
-</section>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>EDUCATION</h2>
+            <div class="about-EDUCATION">
+                <div class="about-text-education">
+                    <p>10th class in ZP HIGH SCHOOL virawada<br>Intermediate in ADITYA JUNIOR COLLEGE SRINAGAR kakinada<br> <B>BTECH</B> in CSE(AI) at PRAGATI ENGINEERING COLLEGE</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">  
+            <h2>SKILLS</h2>
+            <div class="skills">
+                <div class="skill-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>MongoDB</span>
+                    <span>MySQL</span>
+                    <span>Python</span>
+                    <span>Java</span>
+                    <span>Problem Solving in C</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="projects">
         <div class="container">
@@ -110,7 +106,7 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="TICTACTOE.png" alt="TIC-TAC-TOE"width="600" height="300" /> 
+                         <img src="TICTACTOE.png" alt="TIC-TAC-TOE" width="600" height="300" /> 
                     </div>
                     <h3>TIC-TAC-TOE GAME</h3>
                     <p>PLAY AND RELAX</p>
@@ -149,22 +145,22 @@
                 </form>
             </div>
         </div>
-    
+   
         <script>
-              const scriptURL = 'https://script.google.com/macros/s/AKfycbxu47CmBrI4aif3mteheBqv1E9iXt6gfQlxH2GLOYDodBcjmUBhea5_h_5b-IvO67Qd/exec';
-    
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxu47CmBrI4aif3mteheBqv1E9iXt6gfQlxH2GLOYDodBcjmUBhea5_h_5b-IvO67Qd/exec';
+   
             const form = document.forms['contact-form'];
             const formStatus = document.getElementById('form-status');
-    
+   
             form.addEventListener('submit', e => {
                 e.preventDefault();
                 
                 const submitButton = form.querySelector('button');
                 submitButton.disabled = true;
                 submitButton.textContent = 'Sending...';
-    
+   
                 formStatus.textContent = '';
-    
+   
                 const formData = new FormData(form);
                 fetch(scriptURL, { method: 'POST', body: formData })
                     .then(response => {
@@ -188,6 +184,7 @@
             });
         </script>
     </section>
+    
     <footer>
         <div class="container">
             <div class="social-links">
