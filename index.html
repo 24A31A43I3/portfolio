@@ -6,7 +6,7 @@
     <title>Ganesh Neeli | Full Stack Web Developer Portfolio</title>
     
     <link rel="canonical" href="https://www.ganeshneeli.online/">
-
+    
     <meta name="description" content="Portfolio of Ganesh Neeli | Full Stack Web Developer & AI Engineer. Specializing in React, MongoDB, and modern web design. Explore my projects and skills.">
     <meta name="keywords" content="Ganesh Neeli, Web Developer Kakinada, Frontend Developer Portfolio, AI Engineer">
     <meta name="robots" content="index, follow">
@@ -16,18 +16,23 @@
     <meta property="og:image" content="https://www.ganeshneeli.online/ganesh-social.jpg">
     <meta property="og:url" content="https://www.ganeshneeli.online">
     <meta property="og:type" content="website">
-
+    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ganesh Neeli | Full Stack Web Developer Portfolio">
     <meta name="twitter:description" content="Portfolio of Ganesh Neeli - Full Stack Web Developer specializing in React, AI Engineer, and modern web design.">
     <meta name="twitter:image" content="https://www.ganeshneeli.online/ganesh-social.jpg">
     
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="/favicon.png">
-
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -50,11 +55,11 @@
     </script>
 </head>
 <body>
-    <nav>
+    <nav class="navbar" id="navbar">
         <div class="nav-content">
-            <div class="logo">GANESH</div>
+            <a href="#home" class="logo gradient-text">GANESH</a>
             
-            <button class="menu-toggle" id="menu-toggle">☰</button>
+            
             
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -63,140 +68,272 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                
-                <li>
-                    <button id="theme-toggle" aria-label="Toggle Theme">
-                        <span class="theme-icon">🌞</span>
-                    </button>
-                </li>
             </ul>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+            </div>
         </div>
     </nav>
 
-    <section id="home">
+    <section id="home" class="hero mesh-gradient">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        
+        <div class="container hero-content">
+            <div class="profile-wrapper animate-float">
+                <div class="profile-glow"></div>
+                <img src="https://www.ganeshneeli.online/ganesh1.jpg" alt="Ganesh Neeli - Full Stack Developer" class="profile-photo">
+            </div>
+            
+            <div class="hero-text reveal">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-title">
+                    <span class="gradient-text">GANESH</span> Developer
+                </h1>
+                <div class="hero-subtitle">
+                    <span id="typewriter" class="typewriter-text"></span>
+                    <span class="typewriter-cursor"></span>
+                </div>
+                <p class="hero-description">I create beautiful and functional websites that help businesses grow.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary btn-shine">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="section-bg"></div>
         <div class="container">
-            <div class="profile-section">
-                <img src="/ganesh1.jpg" alt="Ganesh Developer" class="profile-photo" width="300" height="300">
-                <div class="text-content">
-                    <h1>Hi, I'm <span style="color: #2563eb;">GANESH</span> Developer</h1>
-                    <p class="subtitle">Full Stack Web Developer</p>
-                    <p class="description">I create beautiful and functional websites that help businesses grow.</p>
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn primary">View My Work</a>
-                        <a href="#contact" class="btn secondary">Contact Me</a>
+            <h2 class="section-title reveal">
+                <span class="gradient-text">ABOUT</span> ME
+            </h2>
+            
+            <div class="glass-card about-card reveal">
+                <p>
+                    I am a passionate <strong>Full Stack Web Developer</strong> and 
+                    a student at <strong>Pragati Engineering College</strong> in 
+                    the Department of <strong>Computer Science Engineering and 
+                    Artificial Intelligence</strong>. I have a deep passion for building innovative 
+                    digital solutions and solving real-world problems through technology.
+                </p>
+                <p style="margin-top: 1.5rem;">
+                    Specializing in the <strong>MERN Stack (MongoDB, Express, 
+                    React, Node.js)</strong> and <strong>AI integration</strong>, 
+                    I focus on creating scalable, high-performance applications. My approach 
+                    combines strong academic foundations with modern development practices 
+                    to deliver seamless user experiences.
+                </p>
+                
+                <div class="about-tags">
+                    <span class="about-tag">React</span>
+                    <span class="about-tag">Node.js</span>
+                    <span class="about-tag">MongoDB</span>
+                    <span class="about-tag">AI/ML</span>
+                    <span class="about-tag">Next.js</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="section-bg"></div>
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="gradient-text">EDUCATION</span>
+            </h2>
+            
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item reveal" data-position="left">
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-year">2024 - Present</span>
+                        <h3>B.Tech in CSE (AI)</h3>
+                        <p class="timeline-institution">Pragati Engineering College</p>
+                        <p class="timeline-desc">Currently pursuing Computer Science Engineering with specialization in Artificial Intelligence.</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                </div>
+                
+                <div class="timeline-item reveal" data-position="right">
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-year">Completed</span>
+                        <h3>Intermediate (12th)</h3>
+                        <p class="timeline-institution">Aditya Junior College, Srinagar Kakinada</p>
+                        <p class="timeline-desc">Higher secondary education with focus on Mathematics, Physics, and Chemistry.</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                </div>
+                
+                <div class="timeline-item reveal" data-position="left">
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-year">Completed</span>
+                        <h3>10th Class</h3>
+                        <p class="timeline-institution">ZP High School Virawada</p>
+                        <p class="timeline-desc">Secondary education foundation with excellent academic performance.</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-school"></i>
                     </div>
                 </div>
             </div>
         </div>
-    </section>  
+    </section>
 
-    <section id="about">
+    <section id="skills" class="section">
+        <div class="section-bg"></div>
         <div class="container">
-            <h2>ABOUT ME</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="about-text">
-    <p>
-        I am a passionate **Full Stack Web Developer** and a student at <strong>Pragati Engineering College</strong> in the Department of <strong>Computer Science Engineering and Artificial Intelligence</strong>.
-        I have a deep passion for building innovative digital solutions and solving real-world problems through technology.
-    </p>
-    <p style="margin-top: 15px;">
-        Specializing in the <strong>MERN Stack (MongoDB, Express, React, Node.js)</strong> and <strong>AI integration</strong>, I focus on creating scalable, high-performance applications.
-        My approach combines strong academic foundations with modern development practices to deliver seamless user experiences.
-    </p>
-</div>
-                </div>
+            <h2 class="section-title reveal">
+                <span class="gradient-text">SKILLS</span>
+            </h2>
+            
+            <div class="skills-container reveal">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Express.js</span>
+                <span class="skill-tag">Git & GitHub</span>
+                <span class="skill-tag">Bootstrap</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Problem Solving in C</span>
             </div>
+            
+            <p class="skills-hint">Hover over skills to see the glow effect ✨</p>
         </div>
     </section>
 
-    <section id="education">
+    <section id="projects" class="section">
+        <div class="section-bg"></div>
         <div class="container">
-            <h2>EDUCATION</h2>
-            <div class="about-EDUCATION">
-                <div class="about-text-education">
-                    <p><b>10th class</b> in ZP HIGH SCHOOL virawada<br><b>Intermediate</b> in ADITYA JUNIOR COLLEGE SRINAGAR kakinada<br> <B>BTECH</B> in CSE(AI) at PRAGATI ENGINEERING COLLEGE</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">  
-            <h2>SKILLS</h2>
-            <div class="skills">
-                <div class="skill-tags">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                    <span>React</span>
-                    <span>MongoDB</span>
-                    <span>MySQL</span>
-                    <span>Node.js</span>
-                    <span>Express.js</span>
-                    <span>Git & GitHub</span>
-                    <span>Bootstrap</span>
-                    <span>Python</span>
-                    <span>Java</span>
-                    <span>Problem Solving in C</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2>MY PROJECTS</h2>
+            <h2 class="section-title reveal">
+                <span class="gradient-text">MY PROJECTS</span>
+            </h2>
+            <p class="section-subtitle reveal">Explore my latest work. Hover over the cards to flip and see project details.</p>
+            
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/dustbin.png" alt="Smartdustbin" width="600" height="300" />
-                    </div>
-                    <h3>Smart Dustbin</h3>
-                    <p>Eco-point system</p>
-                    <div class="project-links">
-                        <a target="_blank" href="https://smartdustbin-ten.vercel.app/" class="btn small">View Live</a>
-                        <a target="_blank" href="https://github.com/24A31A43I3/SmartDustBinTemp" class="btn small secondary">Source Code</a>
+                <div class="flip-card reveal">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front glass-card">
+                            <img src="images/dustbin.png" alt="Smart Dustbin">
+                            <div class="card-overlay"></div>
+                            <div class="card-front-content">
+                                <h3>Smart Dustbin</h3>
+                                <p>Hover to see details →</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back glass-card">
+                            <h3 class="gradient-text">Smart Dustbin</h3>
+                            <p>An innovative Eco-point system that incentivizes recycling. Users earn points for proper waste disposal, promoting environmental sustainability through gamification.</p>
+                            <div class="card-buttons">
+                                <a href="https://smartdustbin-ten.vercel.app/" target="_blank" class="btn btn-primary btn-shine btn-small">
+                                    <i class="fas fa-external-link-alt"></i> View Live
+                                </a>
+                                <a href="https://github.com/24A31A43I3/SmartDustBinTemp" target="_blank" class="btn btn-outline btn-small">
+                                    <i class="fab fa-github"></i> Source
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                         <img src="images/nexus-care.png" alt="nexus-care" width="600" height="300" /> 
-                    </div>
-                    <h3>NEXUS CARE</h3>
-                    <p>connect to doctor</p>
-                    <div class="project-links">
-                        <a target="_blank" href="https://24a31a43i3.github.io/Nexus-Care/" class="btn small">View Live</a>
-                        <a target="_blank" href="https://github.com/24A31A43I3/Nexus-Care" class="btn small secondary">Source Code</a>
+                
+                <div class="flip-card reveal">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front glass-card">
+                            <img src="images/nexus-care.png" alt="NEXUS CARE">
+                            <div class="card-overlay"></div>
+                            <div class="card-front-content">
+                                <h3>NEXUS CARE</h3>
+                                <p>Hover to see details →</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back glass-card">
+                            <h3 class="gradient-text">NEXUS CARE</h3>
+                            <p>A healthcare platform that connects patients with doctors seamlessly. Features appointment scheduling, teleconsultation, and health record management.</p>
+                            <div class="card-buttons">
+                                <a href="https://24a31a43i3.github.io/Nexus-Care/" target="_blank" class="btn btn-primary btn-shine btn-small">
+                                    <i class="fas fa-external-link-alt"></i> View Live
+                                </a>
+                                <a href="https://github.com/24A31A43I3/Nexus-Care" target="_blank" class="btn btn-outline btn-small">
+                                    <i class="fab fa-github"></i> Source
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                         <img src="images/titans.png" alt="titans" width="600" height="300" /> 
-                    </div>
-                    <h3>Team Titans</h3>
-                    <p>Team Titan developers</p>
-                    <div class="project-links">
-                        <a target="_blank" href="https://teamtitans06-fwpi.vercel.app/" class="btn small">View Live</a>
-                        <a target="_blank" href="https://github.com/24A31A43I3/teamtitans06" class="btn small secondary">Source Code</a>
+                
+                <div class="flip-card reveal">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front glass-card">
+                            <img src="images/titans.png" alt="Team Titans">
+                            <div class="card-overlay"></div>
+                            <div class="card-front-content">
+                                <h3>Team Titans</h3>
+                                <p>Hover to see details →</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back glass-card">
+                            <h3 class="gradient-text">Team Titans</h3>
+                            <p>A collaborative platform for Team Titan developers. Features project management, team communication, and development workflow tools.</p>
+                            <div class="card-buttons">
+                                <a href="https://teamtitans06-fwpi.vercel.app/" target="_blank" class="btn btn-primary btn-shine btn-small">
+                                    <i class="fas fa-external-link-alt"></i> View Live
+                                </a>
+                                <a href="https://github.com/24A31A43I3/teamtitans06" target="_blank" class="btn btn-outline btn-small">
+                                    <i class="fab fa-github"></i> Source
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="section">
+        <div class="section-bg"></div>
         <div class="container">
-            <h2>GET IN TOUCH</h2>
-            <div class="contact-content">
-                <form id="contact-form" name="contact-form">
+            <h2 class="section-title reveal">
+                <span class="gradient-text">GET IN TOUCH</span>
+            </h2>
+            <p class="section-subtitle reveal">Have a project in mind? Let's work together to bring your ideas to life.</p>
+            
+            <div class="resume-download reveal">
+                <a href="https://www.ganeshneeli.online/resume.pdf" target="_blank" class="btn btn-secondary btn-shine">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+            
+            <div class="contact-form-wrapper reveal">
+                <form id="contact-form" name="contact-form" class="glass-card contact-form">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required placeholder="Your Name">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
@@ -204,59 +341,73 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                        <textarea id="message" name="message" required rows="4" placeholder="Your Message"></textarea>
                     </div>
-                    <button type="submit" class="btn primary">Send Message</button>
-                    <p id="form-status"></p>
+                    <button type="submit" class="btn btn-primary btn-shine btn-full">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <p id="form-status" class="form-status"></p>
                 </form>
             </div>
         </div>
-    
-        <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycby4k-M77ji4aCmn1oOTxQP3f-XXErS84ZwCoQlY8xiyeqM_eYazPUcK5wxZSJv1ntYW/exec';
-            const form = document.forms['contact-form'];
-            const formStatus = document.getElementById('form-status');
-    
-            form.addEventListener('submit', e => {
-                e.preventDefault();
-                const submitButton = form.querySelector('button');
-                submitButton.disabled = true;
-                submitButton.textContent = 'Sending...';
-                formStatus.textContent = '';
-                const formData = new FormData(form);
-                fetch(scriptURL, { method: 'POST', body: formData })
-                    .then(response => {
-                        if (response.ok) {
-                            formStatus.textContent = 'Your message has been sent successfully!';
-                            formStatus.style.color = 'green';
-                            form.reset();
-                        } else {
-                            formStatus.textContent = 'Error! Please try again later.';
-                            formStatus.style.color = 'red';
-                        }
-                    })
-                    .catch(error => {
-                        formStatus.textContent = 'Error! Unable to send your message.';
-                        formStatus.style.color = 'red';
-                    })
-                    .finally(() => {
-                        submitButton.disabled = false;
-                        submitButton.textContent = 'Send Message';
-                    });
-            });
-        </script>
     </section>
-    
-    <footer>
+
+    <footer class="footer">
         <div class="container">
             <div class="social-links">
-                <a href="https://github.com/24a31a43i3"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/ganesh-neeli-07863732a/"><i class="fab fa-linkedin"></i></a>
-                <a href="https://wa.me/919391864598"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://github.com/24a31a43i3" target="_blank" class="social-link glass-card" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ganesh-neeli-07863732a/" target="_blank" class="social-link glass-card" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/919391864598" target="_blank" class="social-link glass-card" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
             </div>
-            <p>&copy; 2025 GANESH Developer. All rights reserved.</p>
+            <p class="copyright">© 2025 <span class="gradient-text">GANESH</span> Developer. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby4k-M77ji4aCmn1oOTxQP3f-XXErS84ZwCoQlY8xiyeqM_eYazPUcK5wxZSJv1ntYW/exec';
+        const form = document.forms['contact-form'];
+        const formStatus = document.getElementById('form-status');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const submitButton = form.querySelector('button');
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            formStatus.textContent = '';
+            formStatus.className = 'form-status';
+            
+            const formData = new FormData(form);
+            fetch(scriptURL, { method: 'POST', body: formData })
+                .then(response => {
+                    if (response.ok) {
+                        formStatus.textContent = '✓ Your message has been sent successfully!';
+                        formStatus.classList.add('success');
+                        form.reset();
+                    } else {
+                        formStatus.textContent = '✗ Error! Please try again later.';
+                        formStatus.classList.add('error');
+                    }
+                })
+                .catch(error => {
+                    formStatus.textContent = '✗ Error! Unable to send your message.';
+                    formStatus.classList.add('error');
+                })
+                .finally(() => {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                    setTimeout(() => {
+                        formStatus.textContent = '';
+                        formStatus.className = 'form-status';
+                    }, 5000);
+                });
+        });
+    </script>
 
     <script src="main.js"></script>
 </body>
