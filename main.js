@@ -317,3 +317,39 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+// ============================================
+// 15. CUSTOM PWA INSTALL LOGIC
+// ============================================
+let deferredPrompt;
+const installBtn = document.getElementById('install-btn');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent Chrome from showing the default mini-infobar
+    e.preventDefault();
+    // Stash the event so it can be triggered later.
+    deferredPrompt = e;
+    // Show the install button
+    if (installBtn) installBtn.style.display = 'flex';
+});
+
+if (installBtn) {
+    installBtn.addEventListener('click', async () => {
+        if (deferredPrompt) {
+            // Show the install prompt
+            deferredPrompt.prompt();
+            // Wait for the user to respond to the prompt
+            const { outcome } = await deferredPrompt.userChoice;
+            console.log(`User response to install: ${outcome}`);
+            // We've used the prompt, and can't use it again, so clear it
+            deferredPrompt = null;
+            // Hide our custom button
+            installBtn.style.display = 'none';
+        }
+    });
+}
+
+window.addEventListener('appinstalled', () => {
+    // Hide the app-provided install promotion
+    if (installBtn) installBtn.style.display = 'none';
+    console.log('PWA was installed');
+});
